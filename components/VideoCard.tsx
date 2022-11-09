@@ -31,13 +31,14 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
               </>
             </Link>
           </div>
-          {/* <div>
+          <div>
             <Link href="/">
               <div>
                 <p>{post.postedBy.userName}</p>
+                <GoVerified className='text-blue-400 text-md' />
               </div>
             </Link>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
