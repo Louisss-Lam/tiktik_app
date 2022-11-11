@@ -7,7 +7,8 @@ const nextConfig = {
       "play-lh.googleusercontent.com",
       'cdn.pixabay.com',
       'p16-amd-va.tiktokcdn.com',
-      'image.shutterstock.com'
+      'image.shutterstock.com',
+      'lh3.googleusercontent.com'
     ],
   }
 }
