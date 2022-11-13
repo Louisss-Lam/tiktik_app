@@ -110,17 +110,34 @@ const Upload = () => {
                 <label className='text-md font-medium'>Choose a Category</label>
                 <select
                     onChange={() => {}}
-                    className='outline-none'
+                    className='outline-none border-2 border-gray-200 text-md capitalize lg:p-4 p-2 rounded cursor-pointer'
                 >
                     {topics.map((topic) => (
                         <option
                             key={topic.name}
                             className='outline-none capitalize bg-white text-gray-700 text-md p-2 hover:bg-slate-300'
+                            value={topic.name}
                         >
                             {topic.name}
                         </option>
                     ))}
                 </select>
+                <div className='flex gap-6 mt-10'>
+                    <button
+                        onClick={() => {}}
+                        type="button"
+                        className='border-gray-300 border-2 text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+                    >
+                        Discard
+                    </button>
+                    <button
+                        onClick={() => {}}
+                        type="button"
+                        className='bg-[#F51997] text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+                    >
+                        Post
+                    </button>
+                </div>
             </div>
         </div>
     </div>
