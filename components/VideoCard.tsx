@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { HiVolumeUp, HiVolumeOff } from 'react-icons/hi';
 import { BsPlay, BsFillPlayFill, BsFillPauseFill, BsFillPlayBtnFill } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
+import { useGoogleLogin } from 'react-google-login';
 
 interface IProps {
   post: Video;
@@ -16,6 +17,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
   const [playing, setPlaying] = useState(false);
   const [isVideoMuted, setIsVideoMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  
 
   const onVideoPress = () => {
     if(playing) {
@@ -26,6 +28,14 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
       setPlaying(true);
     }
   }
+
+  useEffect(() => {
+    if(videoRef?.current) {
+      videoRef.current.muted = isVideoMuted;
+    }
+  }, [isVideoMuted])
+
+
 
   return (
     <div className='flex flex-col border-b-2 border-gray-200 pb-6'>
