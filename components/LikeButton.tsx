@@ -5,9 +5,10 @@ import useAuthStore from '../store/authStore';
 
 interface IProps {
     handleLike: () => void;
+    handleDislike: () => void;
 }
 
-const LikeButton = ( { handleLike, handleDislike }) => {
+const LikeButton = ( { handleLike, handleDislike }: IProps) => {
     const [alreadyLiked, setAlreadyLiked] = useState(true);
     const { userProfile } = useAuthStore();
 
