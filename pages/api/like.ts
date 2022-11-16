@@ -19,7 +19,7 @@ export default async function handler(
             {
                 _key: uuid(),
                 _ref: userId
-            }
+            },
         ])
         .commit()
     : await client
